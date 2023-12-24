@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Health Care</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnNext">Next</string>
+    <string name="btnSignin">Sign in</string>
+    <string name="btnSignup">Sign up</string>
+    <string name="txtForgetPassword">Forgot your password?</string>
+    <string name="titleForgotPassword">Forgot Password</string>
+    <string name="txtSigninWith">Sign in with</string>
+    <string name="txtNoAccount">Don\'t have account?</string>
+    <string name="txtMessageForgotPassword">Don\'t worry.\nEnter your email and we\'ll send you a email to reset your password.</string>
+    <string name="btnSend">Send</string>
+    <string name="txtAccept">Accept</string>
+    <string name="txtTerm">Term &amp; Conditions</string>
+    <string name="txtAlreadyHaveAccount">Already have an account?</string>
+    <string name="txtResend">Resend</string>
+    <string name="txtIfYouDontReceiveEmail">If you don\'t receive reset email.</string>
+    <string name="txtHome">Home</string>
+    <string name="txtSchedule">Schedule</string>
+    <string name="txtSearch">Search</string>
+    <string name="txtNotification">Notification</string>
+    <string name="txtUser">User</string>
+    <string name="txtMedicines">Medicines</string>
+    <string name="txtDoctors">Doctors</string>
+    <string name="txtPosts">Posts</string>
+    <string name="txtCategory">Category</string>
+    <string name="txtNextWork">Next work</string>
+    <string name="txtNewPosts">New posts</string>
+    <string name="txtShowMore">Show more</string>
+    <string name="txtDescription">Headache relief medication serves to swiftly alleviate headache discomfort through multiple functions:
+            \n1. Pain Alleviation: These medicines primarily reduce headache pain by targeting pain signals and pathways.
+            \n2. Anti-Inflammatory: Some include anti-inflammatory agents to reduce inflammation contributing to headaches.
+            \n3. Vasoconstriction: Certain medications narrow blood vessels in the brain, easing throbbing sensations.
+            \n4. Nervous System Regulation: They modulate neurotransmitters to lower pain perception.
+            \n5. Muscle Relaxation: Tension-caused headaches are relieved by relaxing neck, shoulder, and head muscles..
+            In summary, headache relief medication promptly eases pain through various methods, aiding individuals seeking respite from headache symptoms.</string>
+</resources>

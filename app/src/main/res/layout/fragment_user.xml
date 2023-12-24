@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF2F6">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_information"
+        android:layout_width="410dp"
+        android:layout_height="120dp"
+        android:background="#00A0BB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatarUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/user"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/txtNameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/jakartar"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgAvatarUser"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"></TextView>
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/jakartar"
+            android:text="email"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txtNameUser"
+            app:layout_constraintTop_toBottomOf="@+id/txtNameUser"
+            tools:ignore="MissingConstraints"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/btnInformation"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_information"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_information">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Information"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jakartar"
+            android:textSize="@dimen/_12sdp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:background="@color/white"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnInformation">
+
+        <ImageView
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_settings">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/jakartar"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnSignupToBeADoctor"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:background="@color/white"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSettings">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:src="@drawable/ic_headphone_doctor">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtSignupDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/jakartar"
+            android:text="Sign up to be a doctor"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:background="@color/white"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSignupToBeADoctor">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_logout">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/jakartar"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

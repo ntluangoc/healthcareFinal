@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:background="@android:color/transparent"
+
+        android:padding="@dimen/_5sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_5sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtTitle"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:text="How to use bandage properly?"
+                android:textColor="@color/textGray"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/imgPost"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/post_loading"></ImageView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txtAuthor"
+                android:fontFamily="@font/jakartar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Đoàn nghiện"
+                app:layout_constraintStart_toStartOf="@+id/txtTitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"></TextView>
+            <ImageView
+                android:id="@+id/ic_dot"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/ic_dot"
+                app:layout_constraintBottom_toBottomOf="@id/txtAuthor"
+                app:layout_constraintTop_toTopOf="@id/txtAuthor"
+                app:layout_constraintStart_toEndOf="@+id/txtAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageView>
+            <TextView
+                android:id="@+id/txtDate"
+                android:fontFamily="@font/jakartar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11-11-2023"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtAuthor"
+                app:layout_constraintTop_toTopOf="@id/txtAuthor"
+                app:layout_constraintStart_toEndOf="@+id/ic_dot"
+                tools:layout_editor_absoluteY="6dp"></TextView>
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/mainColor"
+                android:drawableEnd="@drawable/ic_eye"
+                android:text="View"
+                app:layout_constraintStart_toStartOf="@id/txtAuthor"
+                app:layout_constraintTop_toBottomOf="@id/txtAuthor"></Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

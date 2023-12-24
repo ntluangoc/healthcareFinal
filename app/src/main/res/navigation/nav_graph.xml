@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_splash"
+        android:id="@+id/splashFragment"
+        android:name="com.example.healthcare2.view.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/onboardingFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_home"
+        android:id="@+id/homeFragment"
+        android:name="com.example.healthcare2.view.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_medicinesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/medicinesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listDoctorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/listDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailPostFragment" />
+         <action
+            android:id="@+id/action_homeFragment_to_listPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/listPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.healthcare2.view.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_signInFragment"
+            app:popUpTo="@id/splashFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        tools:layout="@layout/fragment_signin"
+        android:name="com.example.healthcare2.view.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_forgotPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password"
+        android:name="com.example.healthcare2.view.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        tools:layout="@layout/fragment_sign_up"
+        android:name="com.example.healthcare2.view.SignUpFragment"
+        android:label="SignUpFragment" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        tools:layout="@layout/fragment_schedule"
+        android:name="com.example.healthcare2.view.ScheduleFragment"
+        android:label="ScheduleFragment" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_addWorkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/addWorkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        tools:layout="@layout/fragment_notification"
+        android:name="com.example.healthcare2.view.NotificationFragment"
+        android:label="NotificationFragment" >
+        <action
+            android:id="@+id/action_notificationFragment_to_detailMedicineFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailMedicineFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_detailPostFragment"
+            app:destination="@id/detailPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        tools:layout="@layout/fragment_user"
+        android:name="com.example.healthcare2.view.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_signInFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_detailUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMedicineFragment"
+        tools:layout="@layout/fragment_detail_medicine"
+        android:name="com.example.healthcare2.view.DetailMedicineFragment"
+        android:label="DetailMedicineFragment" >
+
+        <action
+            android:id="@+id/action_detailMedicineFragment_to_listCommentFrament"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/listCommentFrament" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicinesFragment"
+        tools:layout="@layout/fragment_medicines"
+        android:name="com.example.healthcare2.view.MedicinesFragment"
+        android:label="MedicinesFragment" >
+        <action
+            android:id="@+id/action_medicinesFragment_to_detailMedicineFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailMedicineFragment" />
+        <action
+            android:id="@+id/action_medicinesFragment_to_addMedicinesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/addMedicinesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMedicinesFragment"
+        tools:layout="@layout/fragment_add_medicines"
+        android:name="com.example.healthcare2.view.AddMedicinesFragment"
+        android:label="AddMedicinesFragment" />
+    <fragment
+        android:id="@+id/addPostFragment"
+        tools:layout="@layout/fragment_add_post"
+        android:name="com.example.healthcare2.view.AddPostFragment"
+        android:label="AddPostFragment" />
+    <fragment
+        android:id="@+id/listDoctorFragment"
+        tools:layout="@layout/fragment_list_doctor"
+        android:name="com.example.healthcare2.view.ListDoctorFragment"
+        android:label="ListDoctorFragment" >
+        <action
+            android:id="@+id/action_listDoctorFragment_to_detailUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPostFragment"
+        tools:layout="@layout/fragment_detail_post"
+        android:name="com.example.healthcare2.view.DetailPostFragment"
+        android:label="DetailPostFragment" >
+        <action
+            android:id="@+id/action_detailPostFragment_to_listCommentFrament"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/listCommentFrament" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCommentFrament"
+        tools:layout="@layout/fragment_list_comment"
+        android:name="com.example.healthcare2.view.ListCommentFrament"
+        android:label="ListCommentFrament" />
+    <fragment
+        android:id="@+id/addWorkFragment"
+        tools:layout="@layout/fragment_add_work"
+        android:name="com.example.healthcare2.view.AddWorkFragment"
+        android:label="AddWorkFragment" />
+    <fragment
+        android:id="@+id/listPostFragment"
+        tools:layout="@layout/fragment_list_post"
+        android:name="com.example.healthcare2.view.ListPostFragment"
+        android:label="ListPostFragment" >
+        <action
+            android:id="@+id/action_listPostFragment_to_addPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/addPostFragment" />
+        <action
+            android:id="@+id/action_listPostFragment_to_detailPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailUserFragment"
+        tools:layout="@layout/fragment_detail_user"
+        android:name="com.example.healthcare2.view.DetailUserFragment"
+        android:label="DetailUserFragment" >
+        <action
+            android:id="@+id/action_detailUserFragment_to_detailPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/detailPostFragment" />
+        <action
+            android:id="@+id/action_detailUserFragment_to_medicinesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/medicinesFragment" />
+        <action
+            android:id="@+id/action_detailUserFragment_to_listPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/listPostFragment" />
+        <action
+            android:id="@+id/action_detailUserFragment_to_editUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserFragment"
+        tools:layout="@layout/fragment_edit_user"
+        android:name="com.example.healthcare2.view.EditUserFragment"
+        android:label="EditUserFragment" />
+</navigation>

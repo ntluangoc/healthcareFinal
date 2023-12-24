@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/background_top_signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/doctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtFullName"
+        app:hintTextColor="@color/mainColor"
+        app:boxStrokeColor="@color/mainColor"
+        app:startIconDrawable="@drawable/ic_user_1_line"
+        app:startIconTint="@color/mainColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Full name ...">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputFullname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtEmail"
+        app:hintTextColor="@color/mainColor"
+        app:boxStrokeColor="@color/mainColor"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/mainColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/edtFullName"
+        app:layout_constraintStart_toStartOf="@id/edtFullName"
+        app:layout_constraintEnd_toEndOf="@id/edtFullName"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintHeight_percent="0.08"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Email ...">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEmail"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtPassword"
+        app:hintTextColor="@color/mainColor"
+        app:endIconMode="password_toggle"
+        app:boxStrokeColor="@color/mainColor"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/mainColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        app:layout_constraintStart_toStartOf="@id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@id/edtEmail"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintHeight_percent="0.08"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Password ...">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputPassword"
+            android:padding="@dimen/_5sdp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtConfirmPassword"
+        app:errorEnabled="true"
+        app:boxStrokeErrorColor="@color/red"
+        app:helperText=""
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/mainColor"
+        app:boxStrokeColor="@color/mainColor"
+        app:startIconDrawable="@drawable/ic_confirm_password"
+        app:startIconTint="@color/mainColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintStart_toStartOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtPassword"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintHeight_percent="0.11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm password ...">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputConfirmPassword"
+            android:padding="@dimen/_5sdp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        app:layout_constraintEnd_toEndOf="@id/edtConfirmPassword"
+        app:layout_constraintStart_toStartOf="@id/edtConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@id/edtConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="4dp"></CheckBox>
+
+        <TextView
+            android:id="@+id/txtAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/txtAccept"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/txtTerms"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/txtTerm"
+            android:textColor="@color/mainColor"
+            ></TextView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnSignup"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_max="@dimen/_40sdp"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/mainColor"
+        android:paddingBottom="10dp"
+        android:text="@string/btnSignup"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        android:background="@drawable/background_bottom_signin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:fontFamily="@font/jakartar"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:text="@string/txtAlreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:id="@+id/btnSignin"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/jakartar"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF0000"
+            android:text="@string/btnSignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

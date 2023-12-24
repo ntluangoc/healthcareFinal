@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardPost"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/_5sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/post_loading"></ImageView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/materialCardView"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <ImageView
+                android:id="@+id/icTime"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_clock"
+                app:layout_constraintBottom_toBottomOf="@id/txtTime"
+                app:layout_constraintStart_toStartOf="@id/txtTitle"
+                app:layout_constraintTop_toTopOf="@+id/txtTime">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="dd/MM/yyyy"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@id/txtContent"
+                app:layout_constraintStart_toEndOf="@id/icTime"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"></TextView>
+
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="..."
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/icTime"
+                app:layout_constraintTop_toBottomOf="@+id/txtTime">
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

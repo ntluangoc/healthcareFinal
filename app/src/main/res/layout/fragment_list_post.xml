@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_header"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnReturn"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_left_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageButton>
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/jakartar"
+            android:text="Posts"
+            android:textColor="@color/textGray"
+            android:gravity="center"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+        <ImageButton
+            android:id="@+id/ic_add_post"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_post"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"></ImageButton>
+        <View
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            app:layout_constraintTop_toBottomOf="@id/txtHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/textGray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSearch"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout_header"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/editText"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#649EEFF0"
+                android:hint="Search here ..."
+                android:textColorHint="#818BA0"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/ic_search"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewListPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:listitem="@layout/item_post_home" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
