@@ -2,6 +2,8 @@ This application is like a social network to share information about drugs and r
 - Programming language: Java + Kotlin
 - RESTfull API: Laravel
 - Link full code: https://drive.google.com/drive/folders/1JoIcTzZx2i860YEicZUYxZWlRdR1fLgq?usp=drive_link
+  
+  (**Pass 123456** for Google's security reasons)
 --------------------------------------------------------
 This is a sign in and sign up page. Users can choose to log in with registered account or log in with Google account.
 
